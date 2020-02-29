@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MCSample.Marvel.DataAccess\MCSample.Marvel.DataAccess.csproj" />
+    <ProjectReference Include="..\MCSample.Marvel.Domain\MCSample.Marvel.Domain.csproj" />
+    <ProjectReference Include="..\MCSample.Marvel.Services\MCSample.Marvel.Services.csproj" />
+  </ItemGroup>
+
+
+</Project>
