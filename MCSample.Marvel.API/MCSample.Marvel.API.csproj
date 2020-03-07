@@ -5,6 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="GraniteCore.AutoMapper" Version="2.0.1-alpha" />
+    <PackageReference Include="GraniteCore.EntityFrameworkCore" Version="2.2.0-alpha" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\MCSample.Marvel.DataAccess\MCSample.Marvel.DataAccess.csproj" />
     <ProjectReference Include="..\MCSample.Marvel.Domain\MCSample.Marvel.Domain.csproj" />
     <ProjectReference Include="..\MCSample.Marvel.Services\MCSample.Marvel.Services.csproj" />

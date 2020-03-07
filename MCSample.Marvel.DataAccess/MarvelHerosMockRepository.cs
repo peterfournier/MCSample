@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace MCSample.Marvel.DataAccess
 {
-    public class HeroMockRepository<TDtoModel, TEntity, TPrimaryKey, TUserID> : IBaseRepository<TDtoModel, TEntity, TPrimaryKey>
+    public class MarvelHerosMockRepository<TDtoModel, TEntity, TPrimaryKey> : IBaseRepository<TDtoModel, TEntity, TPrimaryKey>
         where TDtoModel : class, IDto<TPrimaryKey>, new()
         where TEntity : class, IBaseIdentityModel<TPrimaryKey>, new()
     {
         private readonly IList<TEntity> _store = new List<TEntity>();
         protected readonly IGraniteMapper _mapper;
 
-        public HeroMockRepository(
+        public MarvelHerosMockRepository(
             IGraniteMapper mapper
             )
         {

@@ -2,6 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GraniteCore;
+using GraniteCore.AutoMapper;
+using GraniteCore.EntityFrameworkCore;
+using MCSample.Marvel.DataAccess;
+using MCSample.Marvel.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +31,21 @@ namespace MCSample.Marvel.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            registerDependancies(services);
+        }
+
+        private void registerDependancies(IServiceCollection services)
+        {
+            services.AddGraniteAutoMapper(config =>
+            {
+                //config.CreateCarMapping();
+                //config.CreateCustomerMapping();
+            });
+            services.AddSingleton(typeof(IBaseRepository<,,>), typeof(MarvelHerosMockRepository<,,>));
+            services.AddScoped<IAvengersTeamService, AvengersTeamService>();
+            services.AddScoped<IHeroService, HeroService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
