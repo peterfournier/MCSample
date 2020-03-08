@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCSample.Marvel.API", "MCSample.Marvel.API\MCSample.Marvel.API.csproj", "{8293912C-13B7-48BB-B9CF-91B01765BE2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MCSample.Marvel.API", "MCSample.Marvel.API\MCSample.Marvel.API.csproj", "{8293912C-13B7-48BB-B9CF-91B01765BE2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCSample.Marvel.Domain", "MCSample.Marvel.Domain\MCSample.Marvel.Domain.csproj", "{8699E1E8-E390-4609-87A2-847988B0CA45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MCSample.Marvel.Domain", "MCSample.Marvel.Domain\MCSample.Marvel.Domain.csproj", "{8699E1E8-E390-4609-87A2-847988B0CA45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCSample.Marvel.DataAccess", "MCSample.Marvel.DataAccess\MCSample.Marvel.DataAccess.csproj", "{05D5D396-C8CC-4E0F-8147-C53E8C67B4C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MCSample.Marvel.DataAccess", "MCSample.Marvel.DataAccess\MCSample.Marvel.DataAccess.csproj", "{05D5D396-C8CC-4E0F-8147-C53E8C67B4C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCSample.Marvel.Services", "MCSample.Marvel.Services\MCSample.Marvel.Services.csproj", "{ED2D94B9-185B-4BA0-AB5E-9DD6E464E23E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MCSample.Marvel.Services", "MCSample.Marvel.Services\MCSample.Marvel.Services.csproj", "{ED2D94B9-185B-4BA0-AB5E-9DD6E464E23E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "External.WebServices.Marvel", "External.WebServices.Marvel\External.WebServices.Marvel.csproj", "{B72BF7F7-88D4-47F8-A549-4FB336CCF363}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{ED2D94B9-185B-4BA0-AB5E-9DD6E464E23E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED2D94B9-185B-4BA0-AB5E-9DD6E464E23E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED2D94B9-185B-4BA0-AB5E-9DD6E464E23E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B72BF7F7-88D4-47F8-A549-4FB336CCF363}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B72BF7F7-88D4-47F8-A549-4FB336CCF363}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B72BF7F7-88D4-47F8-A549-4FB336CCF363}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B72BF7F7-88D4-47F8-A549-4FB336CCF363}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

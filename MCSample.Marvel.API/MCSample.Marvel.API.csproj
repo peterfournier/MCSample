@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\External.WebServices.Marvel\External.WebServices.Marvel.csproj" />
     <ProjectReference Include="..\MCSample.Marvel.DataAccess\MCSample.Marvel.DataAccess.csproj" />
     <ProjectReference Include="..\MCSample.Marvel.Domain\MCSample.Marvel.Domain.csproj" />
     <ProjectReference Include="..\MCSample.Marvel.Services\MCSample.Marvel.Services.csproj" />

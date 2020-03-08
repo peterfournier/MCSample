@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Linq;
 using System;
+using External.WebServices.Marvel;
 
 namespace MCSample.Marvel.API.Controllers
 {
@@ -19,14 +20,17 @@ namespace MCSample.Marvel.API.Controllers
         private readonly IAvengersTeamService _avengersTeamService;
         private readonly ILogger<AvengersTeamController> _logger;
         private readonly IGraniteMapper _mapper;
+        private readonly RestAPIClient _marvelRestClient;
 
         public AvengersTeamController(
+            RestAPIClient marvelRestClient,
             IAvengersTeamService avengersTeamService,
             IGraniteMapper mapper,
             IHeroService heroService,
             ILogger<AvengersTeamController> logger)
         {
             _avengersTeamService = avengersTeamService;
+            _marvelRestClient = marvelRestClient;
             _mapper= mapper;
             _logger = logger;
         }
@@ -35,6 +39,13 @@ namespace MCSample.Marvel.API.Controllers
         public IQueryable<AvengersTeamDto> Get()
         {
             return _avengersTeamService.GetAll();
+        }
+
+        [HttpGet("search-hero")]
+        public async Task<IActionResult> SearchHeros(string nameStartsWith)
+        {
+            var results= await _marvelRestClient.SearchMarvelCharacters(nameStartsWith);
+            return StatusCode(HttpStatusCode.OK.GetHashCode(), results);
         }
 
         [HttpGet("{teamID}")]

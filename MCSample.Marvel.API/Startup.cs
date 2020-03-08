@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using External.WebServices.Marvel;
 using GraniteCore;
 using GraniteCore.AutoMapper;
 using GraniteCore.EntityFrameworkCore;
@@ -43,6 +44,7 @@ namespace MCSample.Marvel.API
                 //config.CreateCustomerMapping();
             });
             services.AddSingleton(typeof(IBaseRepository<,,>), typeof(MarvelHerosMockRepository<,,>));
+            services.AddSingleton(typeof(RestAPIClient), new RestAPIClient());
             services.AddScoped<IAvengersTeamService, AvengersTeamService>();
             services.AddScoped<IHeroService, HeroService>();
 
