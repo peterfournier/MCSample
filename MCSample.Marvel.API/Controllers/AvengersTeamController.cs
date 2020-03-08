@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using System.Threading.Tasks;
 using System.Net;
 using System.Linq;
+using System;
 
 namespace MCSample.Marvel.API.Controllers
 {
@@ -37,7 +38,7 @@ namespace MCSample.Marvel.API.Controllers
         }
 
         [HttpGet("{teamID}")]
-        public IActionResult GetTeam(int teamID)
+        public IActionResult GetTeam(Guid teamID)
         {
             var team = _avengersTeamService.GetById(teamID);
 

@@ -8,14 +8,14 @@ using System.Text;
 
 namespace MCSample.Marvel.Services
 {
-    public interface IAvengersTeamService : IBaseService<AvengersTeamDto, AvengersTeam, int>
+    public interface IAvengersTeamService : IBaseService<AvengersTeamDto, AvengersTeam, Guid>
     {
         
     }
-    public class AvengersTeamService : BaseService<AvengersTeamDto, AvengersTeam, int>, IAvengersTeamService
+    public class AvengersTeamService : BaseService<AvengersTeamDto, AvengersTeam, Guid>, IAvengersTeamService
     {
         public AvengersTeamService(
-            IBaseRepository<AvengersTeamDto, AvengersTeam, int> repository,
+            IBaseRepository<AvengersTeamDto, AvengersTeam, Guid> repository,
             IGraniteMapper mapper)
             : base(repository, mapper)
         {

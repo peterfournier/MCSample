@@ -1,8 +1,10 @@
-﻿namespace MCSample.Marvel.Domain.ApiModels
+﻿using System;
+
+namespace MCSample.Marvel.Domain.ApiModels
 {
     public class POSTHero
     {
-        public int ID { get; set; }
+        public Guid ID { get; set; }
         public string Name { get; set; }
     }
 }
