@@ -12,7 +12,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "avengersteam",
+      "launchUrl": "avengers-team",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -20,7 +20,7 @@
     "MCSample.Marvel.API": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "avengersteam",
+      "launchUrl": "avenger-steam",
       "applicationUrl": "https://localhost:5001;http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

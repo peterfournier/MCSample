@@ -9,5 +9,10 @@ namespace MCSample.Marvel.Domain.Dtos
     {
         public string Name { get; set; }
         public ICollection<HeroDto> HeroRoster { get; set; } = new List<HeroDto>();
+
+        public AvengersTeamDto() : base()
+        {
+            this.ID = Guid.NewGuid();  // for demo purposes only
+        }
     }
 }

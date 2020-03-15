@@ -20,7 +20,6 @@ namespace MCSample.Marvel.API.Controllers
         private readonly IAvengersTeamService _avengersTeamService;
         private readonly ILogger<AvengersTeamController> _logger;
         private readonly IGraniteMapper _mapper;
-        private readonly RestAPIClient _marvelRestClient;
 
         public AvengersTeamController(
             RestAPIClient marvelRestClient,
@@ -30,7 +29,6 @@ namespace MCSample.Marvel.API.Controllers
             ILogger<AvengersTeamController> logger)
         {
             _avengersTeamService = avengersTeamService;
-            _marvelRestClient = marvelRestClient;
             _mapper= mapper;
             _logger = logger;
         }
@@ -41,23 +39,16 @@ namespace MCSample.Marvel.API.Controllers
             return _avengersTeamService.GetAll();
         }
 
-        [HttpGet("search-hero")]
-        public async Task<IActionResult> SearchHeros(string nameStartsWith)
-        {
-            var results= await _marvelRestClient.SearchMarvelCharacters(nameStartsWith);
-            return StatusCode(HttpStatusCode.OK.GetHashCode(), results);
-        }
-
         [HttpGet("{teamID}")]
-        public IActionResult GetTeam(Guid teamID)
+        public async Task<ActionResult<AvengersTeamDto>> GetTeam(Guid teamID)
         {
-            var team = _avengersTeamService.GetById(teamID);
+            var team = await _avengersTeamService.GetByID(teamID);
 
             return StatusCode(HttpStatusCode.OK.GetHashCode(), team);
         }
 
         [HttpPost]
-        public async Task<ActionResult<POSTHero>> PostTeam(AvengersTeamDto avengersTeam)
+        public async Task<ActionResult<AvengersTeamDto>> PostTeam(AvengersTeamDto avengersTeam)
         {
             var team = await _avengersTeamService.Create(avengersTeam);
 

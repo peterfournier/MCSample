@@ -55,14 +55,28 @@ namespace MCSample.Marvel.DataAccess
             });
         }
 
-        public Task<TDtoModel> GetById(TPrimaryKey id, params Expression<Func<TEntity, object>>[] includeProperties)
+        public Task<TDtoModel> GetByID(TPrimaryKey id, params Expression<Func<TEntity, object>>[] includeProperties)
         {
             throw new NotImplementedException("Parameter 'includeProperties' not supported");
         }
 
-        public Task Update(TPrimaryKey id, TDtoModel entity)
+        public Task Update(TPrimaryKey id, TDtoModel dto)
         {
-            throw new NotImplementedException();
+            return Task.Run(() =>
+            {
+                try
+                {
+                    var entity = _store.Single(x => x.ID.Equals(id));
+                    var index = _store.IndexOf(entity);
+
+                    _store[index] = _mapper.Map<TDtoModel, TEntity>(dto);
+                    
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex); // Logger here
+                }
+            });
         }
     }
 }

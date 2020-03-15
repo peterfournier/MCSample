@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="GraniteCore" Version="2.2.0-alpha" />
+    <PackageReference Include="GraniteCore" Version="2.2.1-alpha" />
   </ItemGroup>
 
 </Project>
