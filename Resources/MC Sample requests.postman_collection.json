@@ -1,0 +1,228 @@
+{
+	"info": {
+		"_postman_id": "f66e39de-e30e-4ecf-866c-eeb2a48b7821",
+		"name": "MC Sample requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Avengers Team",
+			"item": [
+				{
+					"name": "Create Avengers Team",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"ID\": \"9d76e4b4-f0f7-469f-8efa-9065179789e7\",\n\t\"Name\": \"The Revengers\",\n\t\"HeroRoster\":[ ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/avengers-team",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"avengers-team"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Team by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/avengers-team/9d76e4b4-f0f7-469f-8efa-9065179789e7",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"avengers-team",
+								"9d76e4b4-f0f7-469f-8efa-9065179789e7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Teams",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/avengers-team",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"avengers-team"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Heros",
+			"item": [
+				{
+					"name": "Marvel Hero Search",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6InZCUkUwTkxxaW0tNjBjald2Q2FReWciLCJ0eXAiOiJhdCtqd3QifQ.eyJuYmYiOjE1ODI3MTc4NjgsImV4cCI6MTU4MjcyMTQ2OCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1ODE3NCIsImF1ZCI6IkNhckFQSSIsImNsaWVudF9pZCI6InRlc3RjbGllbnQiLCJzY29wZSI6WyJDYXJBUEkiXX0.QObh49tPCOR2PJ5miGWR86jXSTCWo7d-fJYyDGPirJv7oxikxbcIosN68G3hs3cNHd7rCA3_2sSyISQFNwDFlppzqu2wVbrKDsU200UyM5FwznU-ZSrCnQnJYd6ekN4Gfj-vJkGg9wXPPXUplWT9CNamJbPC8NmiiDFCAYkRrndetTWKGpG_ER3kjy-tR83S2YsEmgEkDQeckSuasHt3XAL5UDObE7pcCpYT7GMnHWa8a5j1Ku-4oC_2hP3Zlikyca9GUNCevBzIlWV2aEN60EVhSpST2rTLtXbnVVGVZR0IjBZsQa0GfDKyrOIBeDvrAvVy6aZz7bJM3jIHYjuCZA",
+									"type": "string"
+								},
+								{
+									"key": "tokenType",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/heros/search-hero?nameStartsWith=spider-man",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"heros",
+								"search-hero"
+							],
+							"query": [
+								{
+									"key": "nameStartsWith",
+									"value": "spider-man"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Marvel API",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://gateway.marvel.com/v1/public/characters?ts=2&apikey=&hash=&name=spider-man",
+							"protocol": "https",
+							"host": [
+								"gateway",
+								"marvel",
+								"com"
+							],
+							"path": [
+								"v1",
+								"public",
+								"characters"
+							],
+							"query": [
+								{
+									"key": "ts",
+									"value": "2"
+								},
+								{
+									"key": "apikey",
+									"value": ""
+								},
+								{
+									"key": "hash",
+									"value": ""
+								},
+								{
+									"key": "name",
+									"value": "spider-man"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Hero",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"TeamID\": \"9d76e4b4-f0f7-469f-8efa-9065179789e7\",\n\t\"Hero\": {\n\t\t\"ID\": \"d49ade00-b6f7-4f55-967e-7ba34163a39a\",\n\t\t\"Name\": \"The Hulk\"\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/heros",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"heros"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
