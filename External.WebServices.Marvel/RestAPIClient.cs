@@ -34,8 +34,8 @@ namespace External.WebServices.Marvel
         public void Authenticate(IRestClient client, IRestRequest request)
         {
             var time = DateTime.Now.ToFileTime();
-            var privateKey = "";
-            var apiKey = "";
+            var privateKey = "98bb3012551ab428361803397f86206ca5f3357d";
+            var apiKey = "d03b9e87f48ec57f25076eb28e74785f";
             using (var md5Hash = MD5.Create())
             {
                 string hash = GetMd5Hash(md5Hash, $"{time}{privateKey}{apiKey}");
