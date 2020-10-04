@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 
 namespace MCSample.Marvel.API.Controllers
 {
-    [Authorize]
     public class MarvelControllerBase : ControllerBase
     {
     }
