@@ -12,6 +12,7 @@ using MCSample.Marvel.IdentityServer.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using IdentityServer4;
 
 namespace MCSample.Marvel.IdentityServer
 {
@@ -34,6 +35,17 @@ namespace MCSample.Marvel.IdentityServer
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            addIdentityServer(services);
+        }
+
+        private void addIdentityServer(IServiceCollection services)
+        {
+            var builder = services.AddIdentityServer()
+                .AddInMemoryApiResources(IdentityServerConfig.Apis)
+                .AddInMemoryClients(IdentityServerConfig.Clients);
+
+            builder.AddDeveloperSigningCredential();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -57,6 +69,8 @@ namespace MCSample.Marvel.IdentityServer
 
             app.UseAuthentication();
             app.UseAuthorization();
+
+            app.UseIdentityServer();
 
             app.UseEndpoints(endpoints =>
             {

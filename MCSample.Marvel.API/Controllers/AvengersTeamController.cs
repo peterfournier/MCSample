@@ -14,8 +14,8 @@ using External.WebServices.Marvel;
 namespace MCSample.Marvel.API.Controllers
 {
     [ApiController]
-    [Route("avengers-team")]
-    public class AvengersTeamController : ControllerBase
+    [Route("avengers-team")]    
+    public class AvengersTeamController : MarvelControllerBase
     {
         private readonly IAvengersTeamService _avengersTeamService;
         private readonly ILogger<AvengersTeamController> _logger;

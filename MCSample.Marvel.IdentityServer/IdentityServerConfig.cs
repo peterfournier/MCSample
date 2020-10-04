@@ -20,7 +20,7 @@ namespace MCSample.Marvel.IdentityServer
         public static IEnumerable<ApiResource> Apis =>
             new List<ApiResource>
             {
-                new ApiResource("api1", "My API")
+                new ApiResource("marvelAPI", "Marvel API")
             };
 
         public static IEnumerable<Client> Clients =>
@@ -34,7 +34,7 @@ namespace MCSample.Marvel.IdentityServer
 
                     AllowedGrantTypes = GrantTypes.ClientCredentials,
                     // scopes that client has access to
-                    AllowedScopes = { "api1" }
+                    AllowedScopes = { "marvelAPI" }
                 },
                 // interactive ASP.NET Core MVC client
                 new Client
@@ -56,7 +56,7 @@ namespace MCSample.Marvel.IdentityServer
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
-                        "api1"
+                        "marvelAPI"
                     },
 
                     AllowOfflineAccess = true
@@ -78,7 +78,7 @@ namespace MCSample.Marvel.IdentityServer
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
-                        "api1"
+                        "marvelAPI"
                     }
                 }
             };

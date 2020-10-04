@@ -33,7 +33,24 @@ namespace MCSample.Marvel.API
         {
             services.AddControllers();
 
+            addBearerAuthentication(services);
+
             registerDependancies(services);
+        }
+
+        private void addBearerAuthentication(IServiceCollection services)
+        {
+            // Default scheme
+            services.AddAuthentication("Bearer")
+                .AddJwtBearer("Bearer", options =>
+                {
+                    options.Authority = "https://localhost:44379";
+
+                    options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+                    {
+                        ValidateAudience = false
+                    };
+                });
         }
 
         private void registerDependancies(IServiceCollection services)
@@ -62,6 +79,7 @@ namespace MCSample.Marvel.API
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

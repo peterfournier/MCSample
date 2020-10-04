@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using GraniteCore;
+﻿using GraniteCore;
 using MCSample.Marvel.Domain.Dtos;
 using MCSample.Marvel.Domain.ApiModels;
 using MCSample.Marvel.Services;
@@ -7,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Threading.Tasks;
 using System.Net;
-using System.Linq;
 using System;
 using External.WebServices.Marvel;
 using MCSample.Marvel.API.ViewModels;
@@ -16,7 +14,7 @@ namespace MCSample.Marvel.API.Controllers
 {
     [ApiController]
     [Route("heros")]
-    public class HeroController : ControllerBase
+    public class HeroController : MarvelControllerBase
     {
         private readonly IAvengersTeamService _avengersTeamService;
         private readonly IHeroService _heroService;
