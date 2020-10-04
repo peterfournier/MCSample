@@ -13,9 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MCSample.Marvel.Services", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "External.WebServices.Marvel", "External.WebServices.Marvel\External.WebServices.Marvel.csproj", "{B72BF7F7-88D4-47F8-A549-4FB336CCF363}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{CDBCCDD8-1053-4678-AAC0-D789E1879CFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MCSample.Marvel.IdentityServer", "MCSample.Marvel.IdentityServer\MCSample.Marvel.IdentityServer.csproj", "{83ECAF2F-FD5D-4F8C-9506-3A7C06ED53E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCSample.Marvel.IdentityServer", "MCSample.Marvel.IdentityServer\MCSample.Marvel.IdentityServer.csproj", "{83ECAF2F-FD5D-4F8C-9506-3A7C06ED53E1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCSample.Marvel.WebApplication", "MCSample.Marvel.WebApplication\MCSample.Marvel.WebApplication.csproj", "{8043FDA9-3952-4F50-8E74-B0B9E37B3F97}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +47,10 @@ Global
 		{83ECAF2F-FD5D-4F8C-9506-3A7C06ED53E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83ECAF2F-FD5D-4F8C-9506-3A7C06ED53E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83ECAF2F-FD5D-4F8C-9506-3A7C06ED53E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8043FDA9-3952-4F50-8E74-B0B9E37B3F97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8043FDA9-3952-4F50-8E74-B0B9E37B3F97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8043FDA9-3952-4F50-8E74-B0B9E37B3F97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8043FDA9-3952-4F50-8E74-B0B9E37B3F97}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
