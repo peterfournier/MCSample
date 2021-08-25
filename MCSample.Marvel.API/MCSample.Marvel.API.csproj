@@ -7,7 +7,7 @@
   <ItemGroup>
     <PackageReference Include="GraniteCore.AutoMapper" Version="2.0.1-alpha" />
     <PackageReference Include="GraniteCore.EntityFrameworkCore" Version="2.2.1-alpha" />
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.18" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
   </ItemGroup>
 
